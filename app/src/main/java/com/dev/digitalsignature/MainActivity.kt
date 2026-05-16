@@ -50,3 +50,25 @@ class MainActivity : ComponentActivity() {
         private const val TAG = "MainActivity"
     }
 }
+
+
+/***text
+↓
+AES-256-GCM encrypt text
+↓
+iv + ciphertext + tag
+↓
+SHA256withECDSA sign iv || ciphertext || tag
+↓
+send to backend
+
+Backend:
+
+verify signature
+↓
+decrypt ciphertext
+↓
+get original text
+
+
+ */
